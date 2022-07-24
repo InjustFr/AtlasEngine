@@ -4,7 +4,9 @@ project(gameEngine VERSION 0.1.0)
 include(CTest)
 enable_testing()
 
-add_executable(gameEngine main.cpp)
+file(GLOB_RECURSE project_src "src/*")
+
+add_executable(gameEngine ${project_src})
 
 find_package(Vulkan REQUIRED)
 find_package(glm REQUIRED)
