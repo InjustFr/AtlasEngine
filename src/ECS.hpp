@@ -227,3 +227,8 @@ struct SceneView
         return Iterator(pScene, EntityIndex(pScene->entities.size()), componentMask, all);
     }
 };
+
+struct System
+{
+    virtual void run(float dt);
+};
